@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 7: Introducing jQuery - Event Object</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/c07.css" />
+    <script>
+
+    	$(function(){
+    	$("#slideAd").hide()
+    	bottom = false;
+    		$(window).on("scroll", function(){
+    			$offset_from_foot = $('#footer').offset().top - $(window).height()-500
+    			$scroll_offset = $(window).scrollTop()
+    			console.log($scroll_offset)
+				if ($scroll_offset >=2553) {
+			     $('#slideAd').fadeIn()
+			     console.log('yo')
+			     bottom = true
+			 }  
+			 if($scroll_offset < $offset_from_foot && bottom)
+			 {
+			 	$('#slideAd').fadeOut()
+			 }
+			})
+    	})
+    	
+    	
+   	</script>
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one" class="hot"><em>fresh</em> figs</li>
+        <li id="two" class="hot">pine nuts</li>
+        <li id="three" class="hot">honey</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+         <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+         <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+         <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+         <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+         <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+         <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+         <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+         <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">balsamic vinegar</li>
+      </ul>
+      <h2 id="footer">Trademark</h2>
+
+    </div>
+    <div id="slideAd">Buy ListKing Pro<br>For Only $1.99</div>   
+
+  </body>
+</html>

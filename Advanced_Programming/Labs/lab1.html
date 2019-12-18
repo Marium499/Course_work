@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	td,th{
+		height: 3em;
+		width: 3em;
+		text-align:center;
+		background-color: lightgrey;
+		border: 2px solid black;
+	}
+
+	button{
+		height: 3em;
+		width: 3em;
+		text-align:center;
+			font-size: 24px;
+	}
+
+	#display{
+		width: 98%;
+		height: 2em;
+		font-size: 24px;
+		text-align: right !important;
+	}
+
+	
+	table{
+		position: absolute;
+		left: 40%;
+		top: 20%;
+		border-collapse: collapse;
+	}
+
+	table
+
+</style>
+<head>
+	<title>Lab 1</title>
+</head>
+<body>
+
+	<h1 align="center">Umaid Muhammad Zaffar 237560 BSCS 7B</h1>
+<table>
+	<tr><th colspan="5"><input type="text" id="display" ></th></tr>
+	<tr><td><button onCLick="storage('MC')">MC</button></td><td><button onClick="displayInput(0)">0</button></td><td><button onClick="displayInput(1)">1</button></td><td><button onClick="displayInput(2)">2</button></td><td><button onClick="displayOperator('plus')">+</button></td></tr>
+	<tr><td><button onCLick="storage('MS')">MS</button></td><td><button onClick="displayInput(3)">3</button></td><td><button onClick="displayInput(4)">4</button></td><td><button onClick="displayInput(5)">5</button></td><td><button onClick='displayOperator("minus")'>-</button></td></tr>
+	<tr><td><button onCLick="storage('MR')">MR</button></td><td><button onClick="displayInput(6)">6</button></td><td><button onClick="displayInput(7)">7</button></td><td><button onClick="displayInput(8)">8</button></td><td><button onClick='displayOperator("multiply")'>x</button></td></tr>
+	<tr><td><button onCLick="storage('M+')">M+</button></td><td><button onClick="displayInput(9)">9</button></td><td><button onClick="displaySpecialOps('reverse')">+/-</button></td><td><button onClick="compute()">=</button></td><td><button onClick='displayOperator("divide")'>/</button></td></tr>
+	<tr><td><button onClick="displaySpecialOps('1/x')">1/x</button></td><td><button onClick = "displayInput('.')">.</button></td><td><button onClick="displaySpecialOps('square')">x2</button></td><td><button onClick="displaySpecialOps('sqrt')">sqrt</button></td><td><button onClick="displayInput('clear')">C</button></td></tr>
+
+	<script type="text/javascript">
+		var display = document.getElementById('display');
+		var stored_value = 0.0;
+		operand1 = 0.0;
+		operand2 = 0.0;
+		var isOp = false;
+
+		function isOp1Exist(){
+			if (operand1 == 0){
+				return false;
+			}
+			else{
+				return true
+			}
+		}
+
+		function displayInput(input) {
+			switch(input){
+				case 0:
+					if(display.value == 0){
+						display.value = '0';
+						if(!isOp1Exist()){
+							operand1 = input;
+						}	
+						else{
+							operand2 = input;
+						}	
+					}
+					else{
+						display.value += input;
+						if(!isOp1Exist()){
+							operand1 = display.value;
+						}else{
+							operand2 = display.value;
+						}	
+					}
+				break;
+				case 1:
+					if(display.value == 0){
+						display.value = '1';
+						if(!isOp1Exist()){
+							operand1 = input;
+						}	
+						else{
+							operand2 = input;
+						}	
+					}
+					else{
+						display.value += input;
+						if(!isOp1Exist()){
+							operand1 = display.value;
+						}else{
+							operand2 = display.value;
+						}	
+					}
+				break;
+				case 2:
+					if(display.value == 0){
+						display.value = '2';
+						if(!isOp1Exist()){
+							operand1 = input;
+						}	
+						else{
+							operand2 = input;
+						}	
+					}
+					else{
+						display.value += input;
+						if(!isOp1Exist()){
+							operand1 = display.value;
+						}else{
+							operand2 = display.value;
+						}	
+					}
+				break;
+				case 3:
+					if(display.value == 0){
+						display.value = '3';
+						if(!isOp1Exist()){
+							operand1 = input;
+						}	
+						else{
+							operand2 = input;
+						}	
+					}
+					else{
+						display.value += input;
+						if(!isOp1Exist()){
+							operand1 = display.value;
+						}else{
+							operand2 = display.value;
+						}	
+					}
+				break;
+				case 4:
+					if(display.value == 0){
+						display.value = '4';
+						if(!isOp1Exist()){
+							operand1 = input;
+						}	
+						else{
+							operand2 = input;
+						}	
+					}
+					else{
+						display.value += input;
+						if(!isOp1Exist()){
+							operand1 = display.value;
+						}else{
+							operand2 = display.value;
+						}	
+					}
+				break;
+				case 5:
+					if(display.value == 0){
+						display.value = '5';
+						if(!isOp1Exist()){
+							operand1 = input;
+						}	
+						else{
+							operand2 = input;
+						}	
+					}
+					else{
+						display.value += input;
+						if(!isOp1Exist()){
+							operand1 = display.value;
+						}else{
+							operand2 = display.value;
+						}	
+					}
+				break;
+				case 6:
+					if(display.value == 0){
+						display.value = '6';
+						if(!isOp1Exist()){
+							operand1 = input;
+						}	
+						else{
+							operand2 = input;
+						}	
+					}
+					else{
+						display.value += input;
+						if(!isOp1Exist()){
+							operand1 = display.value;
+						}else{
+							operand2 = display.value;
+						}	
+					}
+				break;
+				case 7:
+					if(display.value == 0){
+						display.value = '7';
+						if(!isOp1Exist()){
+							operand1 = input;
+						}	
+						else{
+							operand2 = input;
+						}	
+					}
+					else{
+						display.value += input;
+						if(!isOp1Exist()){
+							operand1 = display.value;
+						}else{
+							operand2 = display.value;
+						}	
+					}
+				break;
+				case 8:
+					if(display.value == 0){
+						display.value = '8';
+						if(!isOp1Exist()){
+							operand1 = input;
+						}	
+						else{
+							operand2 = input;
+						}	
+					}
+					else{
+						display.value += input;
+						if(!isOp1Exist()){
+							operand1 = display.value;
+						}else{
+							operand2 = display.value;
+						}	
+					}
+				break;
+				case 9:
+					if(display.value == 0){
+						display.value = '9';
+						if(!isOp1Exist()){
+							operand1 = input;
+						}	
+						else{
+							operand2 = input;
+						}	
+					}
+					else{
+						display.value += input;
+						if(!isOp1Exist()){
+							operand1 = display.value;
+						}else{
+							operand2 = display.value;
+						}	
+					}
+				break;
+				case ".":
+					display.value += "."
+				break;
+				case 'clear':
+					isOp = false;
+					display.value = '';
+			}
+		}
+
+		function displayOperator(input){
+			
+			switch (input) {
+				case 'plus':
+				isOp = true;
+					display.value += '+';
+					break;
+				case 'minus':
+				if(operand1 != 0){
+					isOp = true;
+				}else{
+					isOp = false;
+
+				}
+				display.value += '-';
+					
+					break;
+				case 'divide':
+				isOp = true;
+					display.value += '/';
+					break;
+				case 'multiply':
+				isOp = true;
+					display.value += '*';
+					break;
+				
+			}
+		}
+
+		function displaySpecialOps(input){
+			switch (input) {
+				case "reverse":
+					if(display.value > 0){
+						display.value = "-" + eval(display.value);
+					}else{
+						display.value = Math.abs(parseFloat(eval(display.value)))
+					}
+					break;
+				case "sqrt":
+					if(display.value > 0){
+						display.value = Math.sqrt(parseFloat(eval(display.value)));
+					}else{
+						display.value = "undefined"
+					}
+					break;
+				case "square":
+					display.value = parseFloat(eval(display.value))**2;
+					break;
+				case "1/x":
+					display.value = 1/parseFloat(eval(display.value));
+					break;
+				
+			}
+		}
+
+		function storage(input){
+				switch (input) {
+					case "MS":
+						if(isOp){
+							display.value = "Error"	
+						}else{
+							stored_value = parseFloat(eval(display.value))
+						}
+						break;
+					case "MR":
+						display.value = stored_value;
+						break;
+					case "MC":
+						stored_value = 0;
+						break;
+					case "M+":
+						display.value = stored_value + parseFloat(eval(display.value))
+						break;
+				}
+		}
+
+		function compute(){
+					isOp= false;
+					
+					display.value = parseFloat(eval(display.value));	
+					}
+	</script>
+</body>
+</html>
